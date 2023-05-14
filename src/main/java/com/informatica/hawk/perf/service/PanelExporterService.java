@@ -1,6 +1,5 @@
 package com.informatica.hawk.perf.service;
 
-import lombok.extern.slf4j.Slf4j;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -12,7 +11,6 @@ import java.util.UUID;
 
 import static com.informatica.hawk.perf.Constants.*;
 
-@Slf4j
 public class PanelExporterService {
     private final OkHttpClient okHttpClient;
 
@@ -28,7 +26,6 @@ public class PanelExporterService {
                 + "&from=" + from + "&to=" + to
                 + "&width=" + width + "&height=" + height
                 + "&tz=" + timeZone;
-        String savePath = "ExportedPanel.PNG";
 
         String authString = userId + ":" + password;
         String encodedAuthString = Base64.getEncoder().encodeToString(authString.getBytes());

@@ -9,7 +9,7 @@ public class Main {
         PanelExporterService panelExporterService = new PanelExporterService();
         String from = "now-12h";
         String to = "now";
-        String dashboardId = "a2f9dc1d-0f8b-4061-bda4-fbff860bbb9e";
+        String dashboardId = "e00bb90a-054b-4604-a12c-1b48cbf6db74";
         String panelId = "1";
         panelExporterService.exportAndSave(dashboardId, panelId, from, to);
     }
